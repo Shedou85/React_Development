@@ -1,17 +1,20 @@
 import React from 'react'
 import style from './Main.module.scss'
-import Tabs from "./Tabs/Tabs"
+import Tab from "./Tab/Tab"
 import Filter from "./Filter/Filter"
 import Cards from "./Cards/Cards"
-import data from "../Main/data"
 import Title from "./Title/Title"
+import data from "../Main/data"
+import tabData from "../Main/tabData"
 
 
 const Main = () => {
-   let list = data.map(product => {
+   let Cardlist = data.map(product => {
     return <Cards data={product} />
    })
-
+   let TabList = tabData.map(name => {
+    return <Tab TabList={name} />
+   })
 
 
   return (
@@ -22,10 +25,12 @@ const Main = () => {
         <a href="#tatoo_machine">Тату машинки</a>
       </div>
       <Title />
-      <Tabs />
+      <div className={style.tab_wrapper}>
+        {TabList}
+      </div>
       <Filter />
       <div className={style.card_wrapper}>
-        {list}
+        {Cardlist}
       </div>
       
     </div>

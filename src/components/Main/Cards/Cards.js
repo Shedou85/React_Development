@@ -13,6 +13,9 @@ function Cards(props) {
          </div>
          <div className={style.title}>{props.data.title}</div>
          <div className={style.price}>{props.data.price}</div>
+         <div className={style.btn_wrapper}>
+            <div className={style.btn_buy}>Добавить в корзину</div>
+         </div>
       </div>
       </div>
   )
