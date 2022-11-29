@@ -1,0 +1,22 @@
+.wrapper {
+   max-width: 1216px;
+   margin: 0 auto;
+
+   
+   .way_back {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+      a {
+         color: var(--text-color);
+      }
+   }
+   .card_wrapper {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+   }
+   
+}
+

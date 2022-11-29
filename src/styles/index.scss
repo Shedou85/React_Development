@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Jost:wght@300;400;500;700&family=Montserrat&display=swap');
+@import url(../components/Header/Header.module.scss);
+
+// Default CSS zeroes
+*,
+*::before,
+*::after {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: 0;
+}
+a {
+   text-decoration: none;
+}
+ul,
+ol,
+li {
+   list-style: none;
+}
+img { vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+}
+
+// Root Color's Scheme
+:root {
+  --background: #EEEEEE;
+  --text-color: #3E424B;
+  --primary-color: #F5F5F5;
+  --secondary-color: #BB8C5F;
+  --black: #050402;
+}
+
+body {
+  background-color: var(--background);
+  font-family: 'Forum', cursive;
+  font-family: 'Jost', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  
+  .container {
+    max-width: 1440px;
+    border: solid var(--secondary-color);
+    margin: 0 auto;
+  }
+  .btn_primary {
+    width: 200px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 14px, 24px, 14px, 24px;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+  }
+}}
+

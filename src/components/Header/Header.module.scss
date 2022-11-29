@@ -1,0 +1,16 @@
+
+.wrapper-header {
+   width: 100%;
+   height: 160px;
+   background-color: var(--black);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 50px;
+}
+
+.title {
+   color: rgb(255, 208, 0); 
+   font-size: 48px;
+   font-family: forum;
+}
