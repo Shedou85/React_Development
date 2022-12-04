@@ -10,9 +10,6 @@ let tabData = [
    },
    {
       name: 'Расходники'
-   },
-   {
-      name: 'Marius'
    }
 ]
 

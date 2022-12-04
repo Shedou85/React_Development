@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import style from './Main.module.scss'
 import Tab from "./Tab/Tab"
 import Filter from "./Filter/Filter"
@@ -6,16 +6,24 @@ import Cards from "./Cards/Cards"
 import Title from "./Title/Title"
 import data from "../Main/data"
 import tabData from "../Main/tabData"
-
+import Carticon from "./Carticon"
 
 const Main = () => {
-   let Cardlist = data.map(product => {
-    return <Cards data={product} />
-   })
-   let TabList = tabData.map(name => {
-    return <Tab TabList={name} />
-   })
+  let [counter, setCounter] = useState(0)
 
+  let addCart = () => {
+   setCounter(prev => prev +1)
+  }
+
+   let Cardlist = data.map((product,idx) => {
+    return <Cards key={idx} data={product} handleclick={addCart}/>
+   })
+   let TabList = tabData.map((name, idx) => {
+    return <Tab key={idx} TabList={name} />
+   })
+   
+   
+   
 
   return (
     <div className={style.wrapper}>
@@ -28,7 +36,10 @@ const Main = () => {
       <div className={style.tab_wrapper}>
         {TabList}
       </div>
-      <Filter />
+      <div className={style.counter}>
+        <span><Carticon /> <span className={style.amount}>{counter}</span></span>
+      </div> 
+      <Filter /> 
       <div className={style.card_wrapper}>
         {Cardlist}
       </div>

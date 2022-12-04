@@ -4,7 +4,7 @@ import style from './Filter.module.scss'
 
 function Filter() {
   return (
-   <div className={style.filter_item}> Filter's</div>
+   <div className={style.filter_item}> Filter's </div>
   )
 }
 
